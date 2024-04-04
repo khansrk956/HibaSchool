@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:white;
+  /* background-color: #3eecac;
+  background-image: linear-gradient(19deg, #3eecac 0%, #ee74e1 100%); */
+}
+
+.navbar .navbar-brand img {
+  mix-blend-mode: multiply;
+}
+
+/* give padding in navbar item inside link. */
+.navbar .navbar-nav .nav-item a {
+  /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  /* font-weight: 400; */
+  padding: 15px;
+  font-weight: 600;
+}
+.navbar .navbar-nav .nav-item a:hover {
+  color: darkgreen;
+}
+
+.navbar .navbar-nav .nav-but {
+  padding: 10px;
+}
+
+#social-icon a {
+  text-decoration: none;
+}
+#sub-heading a {
+  text-decoration: none;
+}
+
+.c-item {
+  height: 580px;
+}
+.c-img {
+  height: 100%;
+  filter: brightness(0.6);
+  /* object-fit: cover; */ /* make a img as a cover */
+}
+
+/* moving img and p section */
+#col-item {
+  padding: 0;
+}
+
+/* section-5 special - moments*/
+
+#sc-5-con {
+  /* background-color: blue; */
+  height: 270px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.slide-container {
+  display: flex;
+  width: calc(325px * 18);
+  animation: scroll 40s linear 0s infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-325px * 9));
+  }
+}
+.slide-image {
+  /* height: 350; */
+  /* width: 350px; */
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+#img-sc5 {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+}
+#img-sc5:hover {
+  transform: translateZ(11px);
+}
+
+/* card-section */
+.card {
+  margin: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+  #card-id {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* only for pop-card */
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.popup {
+  z-index: 10;
+  background-color: transparent;
+  position: absolute;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  /* top: 1%; */
+  font-family: "Poppins", sans-serif;
+  display: none;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 15px;
+  /* margin: 40px; */
+  background-color:lightsteelblue;
+}
+#card-pop {
+  background-color: white;
+  border-radius: 8px;
+  width: 350px; /* Fixed width for cards */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow for better visibility */
+}
+#card-pop img{
+  width: 300px; height: 250px; margin-bottom: 5px;
+}
+.popup button {
+  display: block;
+  /* Centered button */
+  /* margin: 10px auto 10px;  */
+  background-color: transparent;
+  font-size: 35px;
+  /* color: rgb(234, 55, 55); */
+  color: white;
+  border: none;
+  outline:none;
+  cursor: pointer;
+}
+.popup button:hover{
+  background-color: springgreen;
+  border: 2px solid yello;
+  border-radius:5px;
+}
+/* .popup p{
+            font-size: 14px;
+            text-align: justify;
+            margin: 20px 0;
+        } */
+
+@media (max-width: 768px) {
+  #main-card {
+    flex-direction: row; /* Switch to vertical layout on smaller screens */
+    align-items: center;
+  }
+  #card-pop{
+    width: 115px;
+    height: 150px;
+  }
+  #card-pop img{
+    width: 100%;
+    height: 100%;
+  }
+  #main-card{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    padding: 3px;
+    /* margin: 40px; */
+    background-color:lightsteelblue;
+  }
+  #card-pop h4{
+    font-size: 12px;
+  }
+  #card-pop h6{
+    font-size: 12px;
+  }
+}
+
+
+
+/* image-main-gallery hover effect */
+.hover-effect {
+  transition: transform 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: scale(1.1);
+  opacity: 0.4;
+
+}
+
